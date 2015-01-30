@@ -33,3 +33,11 @@ Of course, 'arro' does not appear in the output, since it is
 found in more than one word.
 
 For the final solution, read in the following dictionary file: [dictionary.txt](https://raw.githubusercontent.com/coreypurcell/sequencer/master/dictionary.txt)
+
+# Running my code
+
+Tested on ruby 2.1
+
+```
+ruby bin/sequence dictionary.txt sequences_output.txt word_output.txt
+```

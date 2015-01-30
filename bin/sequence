@@ -2,5 +2,10 @@
 
 require_relative '../lib/file_sequencer'
 
+unless ARGV.length == 3
+  puts "Usage: sequence input-file sequence-output-file word-output-file"
+  exit
+end
+
 FileSequencer.new(ARGV[0], ARGV[1], ARGV[2]).run
 
