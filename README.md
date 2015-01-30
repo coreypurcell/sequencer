@@ -34,6 +34,13 @@ found in more than one word.
 
 For the final solution, read in the following dictionary file: [dictionary.txt](https://raw.githubusercontent.com/coreypurcell/sequencer/master/dictionary.txt)
 
+# Assumptions
+
+* I treated all characters as valid for a sequence numbers, characters, etc.
+* Uniqueness for sequences is case sensitive, so Abbo is different from abbo
+* Speed is not terribly important, although my solution should scale linearly with dictionary size (verified with a dictionary 5 times larger)
+* Space is not important, dictionary size in this case is only ~200KB
+
 # Running my code
 
 Tested on ruby 2.1
