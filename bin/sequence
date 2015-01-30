@@ -8,4 +8,3 @@ unless ARGV.length == 3
 end
 
 FileSequencer.new(ARGV[0], ARGV[1], ARGV[2]).run
-

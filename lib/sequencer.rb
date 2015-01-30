@@ -1,4 +1,4 @@
-require 'word_sequencer'
+require_relative './word_sequencer'
 
 class Sequencer
   attr_reader :sequence_hash
