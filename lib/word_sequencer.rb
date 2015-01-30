@@ -1,5 +1,4 @@
 class WordSequencer
-  attr_reader :word, :length
 
   def initialize(word, length=4)
     @word = word
@@ -18,6 +17,9 @@ class WordSequencer
     end
     seqs.select {|seq| seq.length == length}
   end
+
+  private
+  attr_reader :word, :length
 end
 
 
