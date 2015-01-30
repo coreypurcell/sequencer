@@ -1,5 +1,5 @@
 require 'rspec'
-require 'sequencer'
+require 'file_sequencer'
 
 RSpec.describe "FileSequencer" do
 

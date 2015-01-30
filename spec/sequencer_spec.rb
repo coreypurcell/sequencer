@@ -6,7 +6,7 @@ RSpec.describe "Sequencer" do
   let(:words) {["arrows", "carrots", "give", "me"]}
 
   it "identifies unique 4 letter sequences" do
-    sequences = Sequencer.run(words)
+    sequences = Sequencer.new.run(words)
     expect(sequences.keys.sort).to eq(
       ["carr", "give", "rots", "rows", "rrot", "rrow"].sort
     )
@@ -18,7 +18,7 @@ RSpec.describe "Sequencer" do
   end
 
   it "records word sequences and the root word" do
-    seq_hash = Sequencer.run(["carrot"])
+    seq_hash = Sequencer.new.run(["carrot"])
     expect(seq_hash).to eq({"carr" => ["carrot"],
                             "arro" => ["carrot"],
                             "rrot" => ["carrot"]})

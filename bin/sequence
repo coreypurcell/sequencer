@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require_relative '../lib/sequencer'
+require_relative '../lib/file_sequencer'
 
 FileSequencer.new(ARGV[0], ARGV[1], ARGV[2]).run
 
