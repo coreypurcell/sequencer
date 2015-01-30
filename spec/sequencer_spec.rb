@@ -1,6 +1,5 @@
 require 'rspec'
 require 'sequencer'
-require 'pry'
 
 RSpec.describe "Sequencer" do
   let(:words) {["arrows", "carrots", "give", "me"]}
@@ -23,26 +22,11 @@ RSpec.describe "Sequencer" do
   describe "#add_word_occurance" do
     it "is case sensitive" do
       sequence_hash =  {"Abbo" => ["Abbot"], "abbo" => ["cabbot"]}
-      sequences = Sequencer.new.add_word_occurance(
-        sequence_hash,
+      sequences = Sequencer.new(sequence_hash).add_word_occurance(
         "abbo",
         "abbout"
       )
       expect(sequence_hash["abbo"]).to eq(["cabbot", "abbout"])
-    end
-  end
-end
-
-RSpec.describe "Word" do
-  describe "#sequence_word" do
-    it "splits a word into 4 letter sequences" do
-      sequences = Word.new("carrot").sequence
-      expect(sequences).to eq(["carr", "arro", "rrot"])
-    end
-
-    it "considers numbers as part of a sequence" do
-      sequences = Word.new("10th").sequence
-      expect(sequences).to eq(["10th"])
     end
   end
 end
