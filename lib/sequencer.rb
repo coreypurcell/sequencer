@@ -33,7 +33,7 @@ class FileSequencer
 
   def initialize(input_file, output_sequences_file, output_words_file)
     @input_file = input_file
-    @output_sequeces_file = output_sequences_file
+    @output_sequences_file = output_sequences_file
     @output_words_file = output_words_file
   end
 
