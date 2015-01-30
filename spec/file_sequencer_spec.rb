@@ -10,9 +10,10 @@ RSpec.describe "FileSequencer" do
   end
 
   it "identifies unique 4 letter sequences for a file" do
-    expect(Sequencer).to receive(:run).and_return({})
+    sequencer = Sequencer.new
+    expect(sequencer).to receive(:run).and_return({})
     expect(FileWriter).to receive(:write).twice
-    FileSequencer.new("spec/support/input_test.txt", "", "").run
+    FileSequencer.new("spec/support/input_test.txt", "", "").run(sequencer)
   end
 
 end

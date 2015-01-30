@@ -41,3 +41,8 @@ Tested on ruby 2.1
 ```
 ruby bin/sequence dictionary.txt sequences_output.txt word_output.txt
 ```
+
+# TODO
+
+* document my thoughts and process
+* what is bad

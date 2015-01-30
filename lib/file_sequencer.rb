@@ -11,9 +11,9 @@ class FileSequencer
     @words = File.read(@input_file).split
   end
 
-  def run
+  def run(sequencer=Sequencer.new)
     read_file
-    seq_hash = Sequencer.new.run(@words)
+    seq_hash = sequencer.run(@words)
     FileWriter.write(@output_sequences_file, seq_hash.keys)
     FileWriter.write(@output_words_file, seq_hash.values.map(&:first))
   end
